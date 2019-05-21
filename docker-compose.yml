@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.5
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid; bundle exec rails s -p 4000 -b '0.0.0.0'"
+    volumes:
+      - .:/sample_app
+    ports:
+      - "4000:4000"
+    tty: true
+    depends_on:
+      - db
