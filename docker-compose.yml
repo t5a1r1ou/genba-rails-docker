@@ -14,3 +14,8 @@ services:
     tty: true
     depends_on:
       - db
+      - selenium_chrome
+  selenium_chrome:
+    image: selenium/standalone-chrome:3.141.59-dubnium
+    ports:
+      - 4444:4444

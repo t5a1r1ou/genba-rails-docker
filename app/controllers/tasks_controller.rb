@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-  before_action :require_admin
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -43,10 +42,6 @@ class TasksController < ApplicationController
 
     def task_params
       params.require(:task).permit(:name, :description)
-    end
-
-    def require_admin
-      redirect_to root_url unless current_user.admin?
     end
 
     def set_task
