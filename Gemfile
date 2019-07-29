@@ -29,6 +29,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_autolink'
 
+gem 'ransack'
+
+gem 'mailcatcher'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
