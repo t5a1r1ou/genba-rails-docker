@@ -33,6 +33,8 @@ gem 'ransack'
 
 gem 'mailcatcher'
 
+gem 'kaminari'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
